@@ -16,6 +16,7 @@ module.exports.run = async (bot, message, args)=>{
   .addField("bbotinfo/btinfo", "Get basic information about me")
   .addField("bdebt/db/checkdebt/debtbal", "Check your debt from borg loans (experimental)")
   .addField("bcoinflip/cf/bf/flip `t/h` `amount`", "Flip a coin and bet on the outcome")
+  .addField("btempmute/mute/tm `user` `time + s/m/h/d`", "Mute the specified user for a specified amount of time")
 
 
   message.channel.send(helpEmbed);
