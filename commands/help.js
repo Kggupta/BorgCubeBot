@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args)=>{
   .addField("bhelp/h", "Gives you the list of commands")
   .addField("bcredits/coins/coin/balance/bal/$", "Check your federation credits balance")
   .addField("bsend/transfer/give `user` `amount`", "Send credits to the specified user")
-  .addField("breport/rpt `user` `reason`", "Report a user and send the reciept to the channel #reports")
+  .addField("breport/rpt/bar `user` `reason`", "Report a user and send the reciept to the channel #reports")
   .addField("bserverinfo/srvinfo", "Get basic information about the server")
   .addField("bbotinfo/btinfo", "Get basic information about me")
   .addField("bdebt/db/checkdebt/debtbal", "Check your debt from borg loans (experimental)")
