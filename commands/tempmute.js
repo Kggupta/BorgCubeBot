@@ -34,16 +34,16 @@ module.exports.run = async (bot, message, args)=>{
   .setTitle("Muted")
   .setColor("RED")
   .addField("Mute Enforcer", `<@${message.author.id}>`)
-  .addField(`${usertomute}`, `Muted for ${timetomute}`);
+  .addField(`User with id ${usertomute}`, `Muted for ${timetomute}`);
 
-  return message.channel.send(muteEmbed);
+  message.channel.send(muteEmbed);
 
   setTimeout(function(){
     usertomute.removeRole(muterole.id);
     let unmuteEmbed = new Discord.RichEmbed()
-    .setTitle(`${usertomute} has been un-muted`)
+    .setTitle(` User with id ${usertomute} has been un-muted`)
     .setColor("RED")
-    .addField("Mute Enforced by", `<@${message.author.id}>`);
+    .addField("Mute was enforced by", `<@${message.author.id}>`);
 
     return message.channel.send(unmuteEmbed);
   }, ms(timetomute));
