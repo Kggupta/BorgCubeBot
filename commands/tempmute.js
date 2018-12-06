@@ -41,7 +41,7 @@ module.exports.run = async (bot, message, args)=>{
   setTimeout(function(){
     usertomute.removeRole(muterole.id);
     let unmuteEmbed = new Discord.RichEmbed()
-    .setTitle(` User with id ${usertomute} has been un-muted`)
+    .setTitle(`User with id ${usertomute} has been un-muted`)
     .setColor("RED")
     .addField("Mute was enforced by", `<@${message.author.id}>`);
 
