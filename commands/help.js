@@ -19,6 +19,7 @@ module.exports.run = async (bot, message, args)=>{
   .addField("btempmute/mute/tm `user` `time + s/m/h/d`", "Mute the specified user for a specified amount of time")
   .addField("bunmute/um `user`", "Unmute the specified user")
   .addField("bassimilate/invade `user` `message`", "Resistance is futile!")
+  .addField("bkick/k/boot `user` `reason`", "Kick the specified user with a specified reason.")
 
   message.channel.send(helpEmbed);
 }
