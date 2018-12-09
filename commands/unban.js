@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args)=>{
   let unbuser = args[0];
-  let server = message.guild.name;
   if (unbuser.length != 18) return message.reply("That is not a valid ID");
   if (!Number.isInteger(parseInt(unbuser))) return message.reply("That is not a valid ID");
   if (!unbuser) return message.reply('You must supply the users **ID**');
