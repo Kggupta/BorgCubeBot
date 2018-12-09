@@ -35,7 +35,7 @@ module.exports.run = async (bot, message, args)=>{
   .setTitle("Money has been updated")
   .setColor("GREEN")
   .addField("Credits administrativly added by", message.author)
-  .addField("Credits reveived by", pUser)
+  .addField("Credits revceived by", pUser)
   .addField("Amount", args[1]);
 
   message.channel.send(transferEmbed);

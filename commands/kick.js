@@ -4,6 +4,9 @@ module.exports.run = async (bot, message, args) => {
     let kickedUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!kickedUser) return message.channel.send("Can't find user!");
     let kickReason = args.join(" ").slice(22);
+    if (!kickReason){
+      kickReason = "No reason given"
+    }
     if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("You aren't an Admin, simple human.");
     if(kickedUser.hasPermission("ADMINISTRATOR")) return message.channel.send("You would attempt to kick someone of The Borg Collective?");
     if(!kickedUser.kickable) return message.channel.send("This person's role is too high for me");
