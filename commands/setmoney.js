@@ -43,5 +43,8 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "addcredit",
-  aliases: ["ac", "addcredits", "addmoney"]
+  aliases: ["ac", "addcredits", "addmoney"],
+  description: "Administrativly add credits to a user",
+  usage: "baddcredits {user} {amount}",
+  accessableby: "The Borg"
 }

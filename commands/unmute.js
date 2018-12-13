@@ -33,5 +33,8 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "unmute",
-  aliases: ["um"]
+  aliases: ["um"],
+  description: "Unmute a player",
+  usage: "bunmute {member}",
+  accessableby: "Administrator"
 }

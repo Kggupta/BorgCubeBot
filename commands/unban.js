@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args)=>{
+  if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("You do not have permission to do that");
   let unbuser = args[0];
   if (unbuser.length != 18) return message.reply("That is not a valid ID");
   if (!Number.isInteger(parseInt(unbuser))) return message.reply("That is not a valid ID");
@@ -23,5 +24,8 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "unban",
-  aliases: ["ub"]
+  aliases: ["ub"],
+  description: "Unban a player",
+  usage: "bunban {Player ID}",
+  accessableby: "Administrator"
 }

@@ -15,5 +15,8 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "serverinfo",
-  aliases: ["srvinfo"]
+  aliases: ["srvinfo"],
+  description: "Get info about the server",
+  usage: "bserverinfo",
+  accessableby: "Anyone"
 }

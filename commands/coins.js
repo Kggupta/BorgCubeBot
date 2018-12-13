@@ -28,5 +28,8 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "credits",
-  aliases: ["coins", "balance", "bal", "coin","$"]
+  aliases: ["coins", "balance", "bal", "coin","$"],
+  description: "Check your credit balance",
+  usage: "bcredits",
+  accessableby: "Anyone"
 }

@@ -74,5 +74,8 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "send",
-  aliases: ["transfer", "give"]
+  aliases: ["transfer", "give"],
+  description: "Transfer money to a user",
+  usage: "bsend {user} {amount}",
+  accessableby: "Anyone"
 }

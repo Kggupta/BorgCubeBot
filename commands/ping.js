@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args)=>{
-  
+
     let basestation = Math.floor(Math.random()*1000)+1;
     let ping = Math.round(bot.ping)
     let picon = message.author.displayAvatarURL;
@@ -16,5 +16,8 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "hail",
-  aliases: ["ping"]
+  aliases: ["ping"],
+  description: "Check the bot ping",
+  usage: "bhail",
+  accessableby: "Anyone"
 }

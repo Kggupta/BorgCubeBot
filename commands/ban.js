@@ -32,5 +32,8 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "ban",
-  aliases: ["banhammer"]
+  aliases: ["banhammer"],
+  description: "Ban A member",
+  usage: "bban {member} {reason}",
+  accessableby: "Administrator"
 }

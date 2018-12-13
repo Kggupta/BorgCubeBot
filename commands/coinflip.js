@@ -81,5 +81,8 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "coinflip",
-  aliases: ["cf", "bf", "flip"]
+  aliases: ["cf", "bf", "flip"],
+  description: "Flip a coin and gamble on the outcome!",
+  usage: "bcoinflip {t/h} {amount}",
+  accessableby: "Anyone"
 }

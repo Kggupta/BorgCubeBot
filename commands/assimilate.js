@@ -13,5 +13,8 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "assimilate",
-  aliases: ["ae", "invade", "borg"]
+  aliases: ["ae", "invade", "borg"],
+  description: "Assimilate the mentioned user",
+  usage: "bassimilate <mention> {message}",
+  accessableby: "Anyone"
 }
