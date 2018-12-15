@@ -54,7 +54,7 @@ module.exports.run = async (bot, message, args)=>{
 module.exports.help = {
   name: "mute",
   aliases: ["tempmute","tm"],
-  description: "Temporarily mute a player",
+  description: "Temporarily mute a player, include a time period in the form of `number` then unit (s,m,h,d)",
   usage: "bmute {user} {time}",
   accessableby: "Administrator"
 }

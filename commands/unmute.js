@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args)=>{
     usertounmute.removeRole(muterole.id);
     return message.reply("User unmuted");
   }else{
-    return message.reply("That user isn't even muted dum dum");
+    return message.reply("That user wasn't muted");
   }
 }
 

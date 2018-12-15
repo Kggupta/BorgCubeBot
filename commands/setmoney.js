@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args)=>{
     let wrongwayEmbed = new Discord.RichEmbed()
     .setTitle("Incorrect Format")
     .setColor("RED")
-    .addField("Proper format", "baddcredit ``user`` ``amount``");
+    .addField("Proper format", "baddmoney ``user`` ``amount``");
 
     return message.channel.send(wrongwayEmbed);
   }
@@ -45,6 +45,6 @@ module.exports.help = {
   name: "addmoney",
   aliases: ["ac", "addcredits", "addcredit"],
   description: "Administrativly add credits to a user",
-  usage: "baddcredits {user} {amount}",
+  usage: "baddmoney {user} {amount}",
   accessableby: "The Borg"
 }
