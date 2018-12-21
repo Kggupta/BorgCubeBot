@@ -19,5 +19,5 @@ module.exports.help = {
   aliases: ["ping"],
   description: "Check the bot ping",
   usage: "bhail",
-  accessableby: "Anyone"
+  accessibleby: "Anyone"
 }

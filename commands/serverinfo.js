@@ -18,5 +18,5 @@ module.exports.help = {
   aliases: ["srvinfo"],
   description: "Get info about the server",
   usage: "bserverinfo",
-  accessableby: "Anyone"
+  accessibleby: "Anyone"
 }

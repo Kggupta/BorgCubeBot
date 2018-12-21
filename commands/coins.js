@@ -31,5 +31,5 @@ module.exports.help = {
   aliases: ["coins", "balance", "bal", "coin","$"],
   description: "Check your credit balance",
   usage: "bcredits",
-  accessableby: "Anyone"
+  accessibleby: "Anyone"
 }

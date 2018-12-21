@@ -56,5 +56,5 @@ module.exports.help = {
   aliases: ["h"],
   description: "Sends help with how to use a command.",
   usage: "bhelp {command}",
-  accessableby: "Anyone"
+  accessibleby: "Anyone"
 }

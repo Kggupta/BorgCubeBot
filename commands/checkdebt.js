@@ -32,5 +32,5 @@ module.exports.help = {
   aliases: ["checkdebt", "debtbal", "db"],
   description: "Check your debt from loans",
   usage: "bdebt",
-  accessableby: "Anyone"
+  accessibleby: "Anyone"
 }

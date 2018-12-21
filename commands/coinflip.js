@@ -84,5 +84,5 @@ module.exports.help = {
   aliases: ["cf", "bf", "flip"],
   description: "Flip a coin and gamble on the outcome!",
   usage: "bcoinflip {t/h} {amount}",
-  accessableby: "Anyone"
+  accessibleby: "Anyone"
 }

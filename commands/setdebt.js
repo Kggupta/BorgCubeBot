@@ -49,5 +49,5 @@ module.exports.help = {
   aliases: ["setloan","sd"],
   description: "Sets the debt of a user (refer to bdebt)",
   usage: "bsetdebt {user} {amount}",
-  accessableby: "The Borg"
+  accessibleby: "The Borg"
 }

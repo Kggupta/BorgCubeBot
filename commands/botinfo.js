@@ -26,5 +26,5 @@ module.exports.help = {
   aliases: ["btinfo"],
   description: "Get info about me",
   usage: "bbotinfo",
-  accessableby: "Anyone"
+  accessibleby: "Anyone"
 }

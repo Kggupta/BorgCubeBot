@@ -24,5 +24,5 @@ module.exports.help = {
   aliases: ["rpt", "bar"],
   description: "Report a player",
   usage: "breport {member} {reason}",
-  accessableby: "Anyone"
+  accessibleby: "Anyone"
 }

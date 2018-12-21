@@ -35,5 +35,5 @@ module.exports.help = {
   aliases: ["banhammer"],
   description: "Ban A member",
   usage: "bban {member} {reason}",
-  accessableby: "Administrator"
+  accessibleby: "Administrator"
 }

@@ -16,5 +16,5 @@ module.exports.help = {
   aliases: ["lrules"],
   description: "Get the rules for how Borg-Loans work",
   usage: "bloanrules",
-  accessableby: "Anyone"
+  accessibleby: "Anyone"
 }

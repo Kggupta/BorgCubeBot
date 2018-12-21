@@ -27,5 +27,5 @@ module.exports.help = {
   aliases: ["ub"],
   description: "Unban a player",
   usage: "bunban {Player ID}",
-  accessableby: "Administrator"
+  accessibleby: "Administrator"
 }
