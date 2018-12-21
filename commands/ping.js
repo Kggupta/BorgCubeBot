@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args)=>{
-    console.log("Testing")
     let basestation = Math.floor(Math.random()*1000)+1;
     let ping = Math.round(bot.ping)
     let picon = message.author.displayAvatarURL;
