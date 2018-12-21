@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args)=>{
 module.exports.help = {
   name: "emote",
   aliases: ["e"],
-  description: "Have the bot send an animated emote on your behalf! (DM The Borg emotes that you want to have added pls thx). Type `bhelp` to see the list of emotes that the bot currently has.",
+  description: "Have the bot send an animated emote on your behalf! Type `brbug {Emote URL}` to have it added to the list of emotes **Must be animated**. Type `bhelp` to see the list of emotes that the bot currently has.",
   usage: "bemote {name}",
   accessibleby: "Anyone"
 }
