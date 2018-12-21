@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args)=>{
       var helpEmbed = new Discord.RichEmbed()
       .setColor("GREEN")
       .setAuthor(`${command.help.name.charAt(0).toUpperCase()+command.help.name.slice(1)}`, message.guild.iconURL)
-      .setDescription(`**Command:** ${command.help.name}\n **Description** ${command.help.description}\n**Usage:** ${command.help.usage}\n **Accessible by:** ${command.help.accessableby}\n **Aliases:** ${command.help.aliases}`)
+      .setDescription(`**Command:** ${command.help.name}\n **Description** ${command.help.description}\n**Usage:** ${command.help.usage}\n **Accessible by:** ${command.help.accessibleby}\n **Aliases:** ${command.help.aliases}`)
       message.channel.send(helpEmbed);
     }
   }
