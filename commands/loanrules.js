@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args)=>{
 module.exports.help = {
   name: "loanrules",
   aliases: ["lrules"],
-  description: "Get the rules for how Borg-Loans work",
+  description: "Get the rules for how Borg-Loans work. These rules only apply to loans given by The Borg",
   usage: "bloanrules",
   accessibleby: "Anyone"
 }
