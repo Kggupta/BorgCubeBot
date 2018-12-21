@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args)=>{
 module.exports.help = {
   name: "rbug",
   aliases: [],
-  description: "Report a bug in the bot",
+  description: "Report a bug in the bot *You can also use this to suggest emotes*",
   usage: "brbug {bug}",
   accessibleby: "Anyone"
 }
