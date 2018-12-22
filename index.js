@@ -10,6 +10,7 @@ let cdseconds = 1;
 
 
 fs.readdir("./commands/", (err, files)=>{
+  bot.channels.get("522985854319329295").send("I've just reached lightspeed!")
   if(err) console.log(err);
 
   let jsfile = files.filter(f => f.split(".").pop() === "js")
