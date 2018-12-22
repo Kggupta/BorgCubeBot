@@ -10,7 +10,6 @@ let cdseconds = 1;
 
 
 fs.readdir("./commands/", (err, files)=>{
-  bot.channels.get("522985854319329295").send("I've just reached lightspeed!")
   if(err) console.log(err);
 
   let jsfile = files.filter(f => f.split(".").pop() === "js")
@@ -32,6 +31,7 @@ fs.readdir("./commands/", (err, files)=>{
 bot.on("ready", async () => {
   console.log(`${bot.user.username} has reached light speed`)
   bot.user.setActivity("bhelp")
+  bot.channels.get("525836618872127498").send("I've just reached lightspeed!")
 });
 
 bot.on("message", async message => {
