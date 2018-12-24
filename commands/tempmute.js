@@ -27,14 +27,13 @@ module.exports.run = async (bot, message, args)=>{
   }
 
   let timetomute = args[1];
-  if(!timetomute) return message.reply("You didnt give a time to mute");
-
+  if (ms(timetomute) === undefined) return message.channel.send("Give a valid time period");
   await(usertomute.addRole(muterole.id));
   let muteEmbed = new Discord.RichEmbed()
   .setTitle("Muted")
   .setColor("RED")
   .addField("Mute Enforcer", `<@${message.author.id}>`)
-  .addField(`User with id ${usertomute}`, `Muted for ${timetomute}`);
+  .addField(`User with id ${usertomute}`, `Muted for ${ms(timetomute)}`);
 
   message.channel.send(muteEmbed);
 
@@ -54,7 +53,7 @@ module.exports.run = async (bot, message, args)=>{
 module.exports.help = {
   name: "mute",
   aliases: ["tempmute","tm"],
-  description: "Temporarily mute a player, include a time period in the form of `number` then unit (s,m,h,d)",
+  description: "Temporarily mute a player, include a time period in the form of `number` then unit (s,m,h,d)\n",
   usage: "bmute {user} {time}",
   accessibleby: "Administrator"
 }
