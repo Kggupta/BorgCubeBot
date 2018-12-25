@@ -45,7 +45,7 @@ bot.on("ready", async () => {
   if(mm<10) {
     mm = '0'+mm
   }
-  today = mm + '/' + dd + '/' + yyyy + " " + hh + ":" + minmin + "EST";
+  today = mm + '/' + dd + '/' + yyyy + " " + hh + ":" + minmin;
   bot.channels.get("525836618872127498").send(`I've just reached lightspeed! With stardate ${today}`)
 });
 
