@@ -31,7 +31,7 @@ fs.readdir("./commands/", (err, files)=>{
 bot.on("ready", async () => {
   console.log(`${bot.user.username} has reached light speed`)
   bot.user.setActivity("bhelp")
-  bot.channels.get("525836618872127498").send("I've just reached lightspeed!")
+  bot.channels.get("525836618872127498").send(`I've just reached lightspeed! With stardate ${message.createdAt}`)
 });
 
 bot.on("message", async message => {
