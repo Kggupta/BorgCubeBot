@@ -31,22 +31,6 @@ fs.readdir("./commands/", (err, files)=>{
 bot.on("ready", async () => {
   console.log(`${bot.user.username} has reached light speed`)
   bot.user.setActivity("bhelp")
-  var today = new Date();
-  var hh = today.getHours();
-  var minmin = today.getMinutes();
-  var dd = today.getDate();
-  var mm = today.getMonth()+1; //January is 0!
-  var yyyy = today.getFullYear();
-
-  if(dd<10) {
-    dd = '0'+dd
-  }
-
-  if(mm<10) {
-    mm = '0'+mm
-  }
-  today = mm + '/' + dd + '/' + yyyy + " " + hh + ":" + minmin;
-  bot.channels.get("525836618872127498").send(`I've just reached lightspeed! With stardate ${today}`)
 });
 
 bot.on("message", async message => {
