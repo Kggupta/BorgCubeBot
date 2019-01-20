@@ -29,4 +29,4 @@ The features I will add to it are as follows, but not limited to:
   - Create channels with a command
   - Adjust member permissions through a command
 - Fun
-  - Meme making
+  - Meme making 
