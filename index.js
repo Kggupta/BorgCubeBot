@@ -57,7 +57,8 @@ bot.on("message", async message => {
       });
     }
     let prefix = botconfig.prefix;
-    if (!message.content.toLowerCase(.startsWith(prefix))) return;
+    if (!message.content.startsWith(prefix) || !message.content.startsWith(prefix.toUpperCase())) return;
+    console.log("Passed")
     if(cooldown.has(message.author.id)){
       message.delete();
       message.reply(`You must wait ${cdseconds} seconds between sending commands`)
