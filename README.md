@@ -1,4 +1,5 @@
 # BorgCubeBot
+[![Discord Bots](https://discordbots.org/api/widget/status/518206536535769099.svg)](https://discordbots.org/bot/518206536535769099)
 
 This bot is really just a fun project that im doing as a hobby and to interact with my friends. Although it is limited in capabilities at the moment, I plan on making it an all-in-one bot, themed after the popular Star Trek villain known only as "The Borg".
 
