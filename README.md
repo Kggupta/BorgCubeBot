@@ -4,15 +4,15 @@ This bot is really just a fun project that im doing as a hobby and to interact w
 
 The features I will add to it are as follows, but not limited to:
 - Economy
-  - A currency system called 'Federation Credits'
-  - Gambling fake money
-  - Gain money by being active in the server
-  - Transfer money between players
+  - ~~A currency system called 'Federation Credits'~~
+  - ~~Gambling fake money~~
+  - ~~Gain money by being active in the server~~
+  - ~~Transfer money between players~~
   - Buy items
 - Moderation
-  - Kick
-  - Ban
-  - Mute
+  - ~~Kick~~
+  - ~~Ban~~
+  - ~~Mute~~
   - Color Roles
   - Warning system
 - RPG
@@ -29,4 +29,4 @@ The features I will add to it are as follows, but not limited to:
   - Create channels with a command
   - Adjust member permissions through a command
 - Fun
-  - Meme making 
+  - Meme making
