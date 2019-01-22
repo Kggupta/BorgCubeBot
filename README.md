@@ -25,7 +25,7 @@ The features I will add to it are as follows, but not limited to:
     - The best ship becomes the federations 'flagship' much like the USS enterprise
   - Choose your species (human, vulcan, klingon, ferengi, etc) and gain skills based on your species
 - Convenience
-  - Search images, videos, google all from a command
+  - Search images, ~~videos~~, google all from a command
   - Create roles using a command
   - Create channels with a command
   - Adjust member permissions through a command
