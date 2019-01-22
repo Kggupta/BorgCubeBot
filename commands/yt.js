@@ -24,9 +24,9 @@ module.exports.run = async (bot, message, args)=>{
 }
 
 module.exports.help = {
-  name: "yt",
-  aliases: ["youtube", "ytsearch", "y"],
+  name: "youtube",
+  aliases: ["yt", "ytsearch", "y"],
   description: "Search YouTube for a video",
-  usage: "byt {name of vid}",
+  usage: "byoutube {name of vid OR the URL}",
   accessibleby: "Anyone"
 }
