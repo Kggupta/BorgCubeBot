@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const YouTube = require("simple-youtube-api");
 const youtube = new YouTube(process.env.YOUTUBE_API_KEY);
 module.exports.run = async (bot, message, args)=>{
-  const searchQuery = args.slice(1).join(' ')
+  const searchQuery = args.join(' ')
   const url = searchQuery.replace(/<(.+)>/g,'$1')
   console.log(searchQuery)
   try{
