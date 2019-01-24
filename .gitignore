@@ -2,3 +2,4 @@ node_modules/
 package-lock.json
 token.json
 coins.json
+.DS_Store
