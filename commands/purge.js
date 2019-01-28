@@ -13,9 +13,7 @@ module.exports.run = async (bot, message, args)=>{
       message.channel.bulkDelete(am)
       .then(() => {
           message.channel.send("Just assimilated: " + am + " messages.").then(m => m.delete(1500))
-      })
-      .catch(err => message.channel.send("Assimilating the messages failed for some reason. If you get this messages please report the bug using `brbug {explantion}`").then(m => m.delete(5000)))
-    }, 1000);
+      })}, 1000);
   } else {
   	message.channel.send("Feeble human you do not have permission to do that!").then(m => m.delete(1500))
   }
