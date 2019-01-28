@@ -14,6 +14,7 @@ The features I will add to it are as follows, but not limited to:
   - ~~Kick~~
   - ~~Ban~~
   - ~~Mute~~
+  - ~~Mass delete messages~~
   - Color Roles
   - Warning system
 - RPG
