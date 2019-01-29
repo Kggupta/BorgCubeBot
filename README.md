@@ -27,8 +27,7 @@ The features I will add to it are as follows, but not limited to:
   - Choose your species (human, vulcan, klingon, ferengi, etc) and gain skills based on your species
 - Convenience
   - Search images, ~~videos~~, google all from a command
-  - Create roles using a command
-  - Create channels with a command
+  - ~~Add roles using a command~~
   - Adjust member permissions through a command
 - Fun
   - Meme making
