@@ -57,8 +57,8 @@ bot.on("message", async message => {
       });
     }
     let prefix = botconfig.prefix;
-    if (message.content.startsWith(prefix) || message.content.startsWith(prefix.toUpperCase())){
-    if(cooldown.has(message.author.id)){
+    if (!message.content.startsWith(prefix)) return;
+    if(cooldown.has(message.author.id) && message.author.id != "444998388795179042"){
       message.delete();
       message.reply(`You must wait ${cdseconds} seconds between sending commands`)
       return;
@@ -68,6 +68,7 @@ bot.on("message", async message => {
     let cmd = messageArray[0].toLowerCase();
     let args = messageArray.slice(1);
     let commandfile = bot.commands.get(cmd.slice(prefix.length)) || bot.commands.get(bot.aliases.get(cmd.slice(prefix.length)))
+    console.log("Passed")
     if(commandfile) commandfile.run(bot,message,args)
     setTimeout(() =>{
       cooldown.delete(message.author.id)
