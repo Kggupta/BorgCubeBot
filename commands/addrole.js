@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args)=>{
           return message.channel.send(`:white_check_mark: Role ${rolename} has been added to ${member} `);
       })
       .catch ((err) => {
-          return message.channel.send(`:x: Was not able to add Role ${role} to ${member} `);
+          return message.channel.send(`:x: Was not able to add Role ${rolename} to ${member} `);
       });
   } else {
       return message.channel.send("You do not have permission to do this, you must have `MANAGE_ROLES_OR_PERMISSIONS` to use this command.");
