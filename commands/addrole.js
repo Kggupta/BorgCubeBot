@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args)=>{
       if (!member || !role) return message.channel.send("Add role failed due to invalid arguments")
       member.addRole(role)
       .then((MemberGuild) => {
-          return message.channel.send(`:white_check_mark: Role ${role} has been added to ${member} `);
+          return message.channel.send(`:white_check_mark: Role ${rolename} has been added to ${member} `);
       })
       .catch ((err) => {
           return message.channel.send(`:x: Was not able to add Role ${role} to ${member} `);
