@@ -57,7 +57,7 @@ bot.on("message", async message => {
       });
     }
     let prefix = botconfig.prefix;
-    if (!message.content.startsWith(prefix)) return;
+    if (message.content.startsWith(prefix) || message.content.startsWith(prefix.toUpperCase())){
     if(cooldown.has(message.author.id)){
       message.delete();
       message.reply(`You must wait ${cdseconds} seconds between sending commands`)
@@ -72,6 +72,7 @@ bot.on("message", async message => {
     setTimeout(() =>{
       cooldown.delete(message.author.id)
     }, cdseconds * 1000)
+  }
 });
 
 bot.login(process.env.BOT_TOKEN);

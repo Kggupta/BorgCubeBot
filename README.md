@@ -1,18 +1,20 @@
 # BorgCubeBot
 
+
 This bot is really just a fun project that im doing as a hobby and to interact with my friends. Although it is limited in capabilities at the moment, I plan on making it an all-in-one bot, themed after the popular Star Trek villain known only as "The Borg".
 
 The features I will add to it are as follows, but not limited to:
 - Economy
-  - A currency system called 'Federation Credits'
-  - Gambling fake money
-  - Gain money by being active in the server
-  - Transfer money between players
+  - ~~A currency system called 'Federation Credits'~~
+  - ~~Gambling fake money~~
+  - ~~Gain money by being active in the server~~
+  - ~~Transfer money between players~~
   - Buy items
 - Moderation
-  - Kick
-  - Ban
-  - Mute
+  - ~~Kick~~
+  - ~~Ban~~
+  - ~~Mute~~
+  - ~~Mass delete messages~~
   - Color Roles
   - Warning system
 - RPG
@@ -24,9 +26,8 @@ The features I will add to it are as follows, but not limited to:
     - The best ship becomes the federations 'flagship' much like the USS enterprise
   - Choose your species (human, vulcan, klingon, ferengi, etc) and gain skills based on your species
 - Convenience
-  - Search images, videos, google all from a command
-  - Create roles using a command
-  - Create channels with a command
+  - Search images, ~~videos~~, google all from a command
+  - ~~Add roles using a command~~
   - Adjust member permissions through a command
 - Fun
-  - Meme making 
+  - Meme making
