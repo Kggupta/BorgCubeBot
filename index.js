@@ -73,7 +73,6 @@ bot.on("message", async message => {
     setTimeout(() =>{
       cooldown.delete(message.author.id)
     }, cdseconds * 1000)
-  }
 });
 
 bot.login(process.env.BOT_TOKEN);
