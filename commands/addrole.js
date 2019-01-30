@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args)=>{
           return message.channel.send(`:x: Was not able to add Role ${role} to ${member} `);
       });
   } else {
-      return message.channel.send("You do not have permission to do this`MANAGE_ROLES_OR_PERMISSIONS`");
+      return message.channel.send("You do not have permission to do this, you must have `MANAGE_ROLES_OR_PERMISSIONS` to use this command.");
   }
 }
 
