@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
 const YouTube = require("simple-youtube-api");
 const youtube = new YouTube(process.env.YOUTUBE_API_KEY);
+const ffmpeg = require("ffmpeg")
 
 module.exports.run = async (bot, message, args)=>{
   const voiceChannel = message.member.voiceChannel;
