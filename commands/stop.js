@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
 const YouTube = require("simple-youtube-api");
-
+var ffmpeg = require('ffmpeg');
 module.exports.run = async (bot, message, args)=>{
   const voiceChannel = message.member.voiceChannel;
   if(!message.member.voiceChannel) return message.channel.send("You are not in a VC")
