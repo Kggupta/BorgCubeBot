@@ -37,9 +37,27 @@ module.exports.run = async (bot, message, args)=>{
   const song = {
     id: video.id,
     title: video.title,
-    url: `https://www.youtube.com/watch?v=${video.id}`
+    url: `https://www.youtube.com/watch?v=${video.id}`,
+    durationhour: video.duration.hours,
+    durationminutes: video.duration.minutes,
+    durationseconds: video.duration.seconds
   };
-  message.channel.send(`Now playing ${song.title}`)
+  if(song.durationhour.toString().length <=1){
+    var durationarray = "0" + song.durationhour.toString() + ":"
+  }else{
+    var durationarray = song.durationhour.toString() +":"
+  }
+  if(song.durationminutes.toString().length <= 1){
+    var durationarray = durationarray + "0" + song.durationminutes.toString() + ":"
+  }else{
+    var durationarray = durationarray + song.durationminutes.toString() + ":"
+  }
+  if(song.durationseconds.toString().length <= 1){
+    var durationarray = durationarray + "0" + song.durationseconds.toString()
+  }else {
+    var durationarray = durationarray + song.durationseconds.toString()
+  }
+  message.channel.send(`Now playing 🎵🎵**${song.title} ${durationarray}**🎵🎵`)
   const dispatch = connection.playStream(ytdl(song.url))
     .on('end', ()=>{
       console.log("Song ended");
