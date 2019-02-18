@@ -28,6 +28,7 @@ The features I will add to it are as follows, but not limited to:
     - The best ship becomes the federations 'flagship' much like the USS enterprise
   - Choose your species (human, vulcan, klingon, ferengi, etc) and gain skills based on your species
 - Convenience
+  - ~~Use animated emotes without needing to buy nitro~~
   - Search images, ~~videos~~, google all from a command
   - ~~Add roles using a command~~
   - Adjust member permissions through a command
