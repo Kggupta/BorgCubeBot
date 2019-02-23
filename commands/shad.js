@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args)=>{
   if (message.guild.id != "546754678172549124") return message.channel.send("Yeah no i'd rather not");
+  if (message.author.id != "444998388795179042") return message.channel.send("Im sorry, for the time being this command is only enabled for Keshav Gupta / The Borg (Bot creator) as the command is still very buggy. At the moment, please just follow the format as instructed by MEE6 and I will get to adding your social media account ASAP. Sorry for the inconvenience!")
   message.channel.send("Passed to compiler");
   let nameOfUser = message.guild.member(message.mentions.users.first());
   if (!nameOfUser) return message.channel.send("You need to add a name.");
