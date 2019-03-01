@@ -31,6 +31,7 @@ The features I will add to it are as follows, but not limited to:
   - ~~Use animated emotes without needing to buy nitro~~
   - Search images, ~~videos~~, google all from a command
   - ~~Add roles using a command~~
+  - ~~Run polls with the bot~~
   - Adjust member permissions through a command
 - Fun
   - Meme making
