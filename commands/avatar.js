@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args)=>{
-  let msg = await message.channel.send('`Please wait`')
   let user = message.mentions.users.first() || message.author;
 
   let boticon = bot.user.displayAvatarURL;
