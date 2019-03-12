@@ -27,23 +27,42 @@ module.exports.run = async (bot, message, args)=>{
   }
 
   let timetomute = args[1];
+  let muteReason = "";
   if (ms(timetomute) === undefined) return message.channel.send("Give a valid time period");
+  args.shift();
+  args.shift();
+  console.log(args);
   await(usertomute.addRole(muterole.id));
+  if(!args[1]){
+    muteReason = "No reason given";
+  }else{
+    muteReason = args.join(" ");
+  }
   let muteEmbed = new Discord.RichEmbed()
   .setTitle("Muted")
   .setColor("RED")
   .addField("Mute Enforcer", `<@${message.author.id}>`)
-  .addField(`User with id ${usertomute}`, `Muted for ${ms(timetomute)}`);
-
+  .addField("User Muted", `<@${usertomute.id}>`)
+  .addField("Duration of mute", timetomute)
+  .addField("Reason", muteReason)
   message.channel.send(muteEmbed);
+
+  let muteChannel = message.guild.channels.find(`name`, "mod-log");
+  if(!muteChannel){
+    muteChannel = message.channel
+    message.channel.send("Can't find incidents channel. I will mute this person anyway, The Borg suggests that you make a channel called `mod-log` in the future.");
+  }else{
+    muteChannel.send(muteEmbed);
+  }
+
 
   setTimeout(function(){
     usertomute.removeRole(muterole.id);
     let unmuteEmbed = new Discord.RichEmbed()
-    .setTitle(`User with id ${usertomute} has been un-muted`)
+    .setTitle("Unmuted")
     .setColor("RED")
-    .addField("Mute was enforced by", `<@${message.author.id}>`);
-
+    .addField("Mute was enforced by", `<@${message.author.id}>`)
+    .addField("User Unmuted", `<@${usertomute.id}>`);
     return message.channel.send(unmuteEmbed);
   }, ms(timetomute));
 
