@@ -30,6 +30,6 @@ module.exports.help = {
   name: "addrole",
   aliases: ["ar"],
   description: "Add the specified role to the specified user. The bot must have manage roles perm and must have a higher role than the one you wish to add to the user.",
-  usage: "baddrole <user> {role}",
+  usage: "baddrole <member> {role}",
   accessibleby: "MANAGE_ROLES_OR_PERMISSIONS"
 }

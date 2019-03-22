@@ -17,6 +17,6 @@ module.exports.help = {
   name: "avatar",
   aliases: ["av"],
   description: "Enlarge the avatar of a user",
-  usage: "bavatar {Mention}",
+  usage: "bavatar <member>",
   accessibleby: "Anyone"
 }

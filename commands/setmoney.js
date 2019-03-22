@@ -45,6 +45,6 @@ module.exports.help = {
   name: "addmoney",
   aliases: ["ac", "addcredits", "addcredit"],
   description: "Administrativly add credits to a user",
-  usage: "baddmoney {user} {amount}",
+  usage: "baddmoney <member> [amount]",
   accessibleby: "The Borg"
 }

@@ -35,6 +35,6 @@ module.exports.help = {
   name: "unmute",
   aliases: ["um"],
   description: "Unmute a player",
-  usage: "bunmute {member}",
+  usage: "bunmute <member>",
   accessibleby: "Administrator"
 }

@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args)=>{
       var videos = await youtube.searchVideos(url, 1);
       var video = await youtube.getVideoByID(videos[0].id);
     }catch(error){
-      return message.channel.send("That video returned nul. Dont think this should happen? Report the bug using `brbug {explantion}`")
+      return message.channel.send("That video returned nul.")
     }
   }
   const song = {
@@ -27,6 +27,6 @@ module.exports.help = {
   name: "youtube",
   aliases: ["yt", "ytsearch"],
   description: "Search YouTube for a video",
-  usage: "byoutube {name of vid OR the URL}",
+  usage: "byoutube {title/URL}",
   accessibleby: "Anyone"
 }

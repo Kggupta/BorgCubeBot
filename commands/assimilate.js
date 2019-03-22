@@ -15,6 +15,6 @@ module.exports.help = {
   name: "assimilate",
   aliases: ["ae", "invade", "borg"],
   description: "Assimilate the mentioned user",
-  usage: "bassimilate <mention> {message}",
+  usage: "bassimilate <member> {message}",
   accessibleby: "Anyone"
 }

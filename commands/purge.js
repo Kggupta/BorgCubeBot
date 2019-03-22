@@ -20,6 +20,6 @@ module.exports.help = {
   name: "purge",
   aliases: ["delete", "del"],
   description: "Delete a specified amount of messages in a channel.\n- Bot can only purge 100 messages at a time\n - Messages older than 14 days cannot be deleted. This is due to Discord ToS and cannot be avoided.",
-  usage: "bpurge {amount}",
+  usage: "bpurge [amount]",
   accessibleby: "`MANAGE_MESSAGES`"
 }

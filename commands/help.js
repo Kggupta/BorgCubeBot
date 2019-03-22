@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args)=>{
       var helpEmbed = new Discord.RichEmbed()
       .setColor("GREEN")
       .setAuthor(`${command.help.name.charAt(0).toUpperCase()+command.help.name.slice(1)}`, message.guild.iconURL)
-      .setDescription(`**Command:** ${command.help.name}\n **Description:** ${command.help.description}\n**Usage:** ${command.help.usage}\n **Accessible by:** ${command.help.accessibleby}\n **Aliases:** ${command.help.aliases}`)
+      .setDescription(`**Command:** ${command.help.name}\n **Description:** ${command.help.description}\n**Usage:** ${command.help.usage}\n **Accessible by:** ${command.help.accessibleby}\n **Aliases:** ${command.help.aliases}\n\n **Note:**\n- **< >** must be a mention. \n- **{ }** have no character limit.\n- **[ ]** are one word arguments.\n- Ommit brackets when using a command.`)
       message.channel.send(helpEmbed);
     }
   }
@@ -36,6 +36,6 @@ module.exports.help = {
   name: "help",
   aliases: ["h"],
   description: "Sends help with how to use a command.",
-  usage: "bhelp {command}",
+  usage: "bhelp [command]",
   accessibleby: "Anyone"
 }

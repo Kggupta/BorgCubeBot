@@ -48,6 +48,6 @@ module.exports.help = {
   name: "setdebt",
   aliases: ["setloan","sd"],
   description: "Sets the debt of a user (refer to bdebt)",
-  usage: "bsetdebt {user} {amount}",
+  usage: "bsetdebt <member> {amount}",
   accessibleby: "The Borg"
 }

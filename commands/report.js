@@ -23,6 +23,6 @@ module.exports.help = {
   name: "report",
   aliases: ["rpt", "bar"],
   description: "Report a player",
-  usage: "breport {member} {reason}",
+  usage: "breport <member> {reason}",
   accessibleby: "Anyone"
 }

@@ -73,6 +73,6 @@ module.exports.help = {
   name: "mute",
   aliases: ["tempmute","tm"],
   description: "Temporarily mute a player, include a time period in the form of `number` then unit (s,m,h,d)\n -For this command to work the bot must have `Manage Roles` permission and a higher role than the target.\n -If the target has a role that manually gives them permission to send messages this command will not work!",
-  usage: "bmute {user} {time}",
+  usage: "bmute <member> [time]",
   accessibleby: "Administrator"
 }

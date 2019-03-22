@@ -35,6 +35,6 @@ module.exports.help = {
   name: "kick",
   aliases: ["k", "boot"],
   description: "Kick a member",
-  usage: "bkick {member} {reason}",
+  usage: "bkick <member> {reason}",
   accessibleby: "Administrator"
 }

@@ -76,6 +76,6 @@ module.exports.help = {
   name: "send",
   aliases: ["transfer", "give"],
   description: "Transfer money to a user",
-  usage: "bsend {user} {amount}",
+  usage: "bsend <member> [amount]",
   accessibleby: "Anyone"
 }

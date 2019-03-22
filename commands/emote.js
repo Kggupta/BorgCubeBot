@@ -21,6 +21,6 @@ module.exports.help = {
   name: "emote",
   aliases: ["e"],
   description: "\n-Have the bot send an animated emote on your behalf!\n-Type `brbug {Emote URL}` to have it added to the list of emotes **Must be animated**.\n-Type `bhelp` to see the list of emotes that the bot currently has.",
-  usage: "bemote {name}",
+  usage: "bemote [name]",
   accessibleby: "Anyone"
 }

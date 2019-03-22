@@ -22,6 +22,6 @@ module.exports.help = {
   name: "userinfo",
   aliases: ["uinfo"],
   description: "Basic information on a mentioned user (or yourself)",
-  usage: "busernifo <mention>",
+  usage: "buserinfo <member>",
   accessibleby: "Anyone"
 }

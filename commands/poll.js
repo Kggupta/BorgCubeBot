@@ -18,6 +18,6 @@ module.exports.help = {
   name: "poll",
   aliases: ["p", "ask"],
   description: "Have the bot run a poll using the parameters you have",
-  usage: "bpoll {Message}",
+  usage: "bpoll {question}",
   accessibleby: "Anyone"
 }
