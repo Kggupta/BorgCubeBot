@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args)=>{
         }
       }
       const role = message.guild.roles.find(role => role.name === rolename);
-      if (member.id === message.author.id) return message.reply("You cannot remove a role to yourself");
+      if (member.id === message.author.id) return message.reply("You cannot remove a role from yourself");
       if (!member || !role) return message.channel.send("Remove role failed due to invalid arguments")
       member.removeRole(role)
       .then((MemberGuild) => {
