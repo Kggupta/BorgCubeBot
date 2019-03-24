@@ -4,7 +4,6 @@ const youtube = new YouTube(process.env.YOUTUBE_API_KEY);
 module.exports.run = async (bot, message, args)=>{
   const searchQuery = args.join(' ')
   const url = searchQuery.replace(/<(.+)>/g,'$1')
-  console.log(searchQuery)
   try{
     const video = await youtube.getVideo(url)
   }catch(error){
