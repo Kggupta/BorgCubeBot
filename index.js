@@ -4,10 +4,9 @@ const bot = new Discord.Client({disableEveryone:true});
 const fs = require("fs");
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
-let coins = require("./coins.json");
 let cooldown = new Set();
 let cdseconds = 1;
-
+let prefix = botconfig.prefix;
 
 fs.readdir("./commands/", (err, files)=>{
   if(err) console.log(err);
@@ -35,41 +34,21 @@ bot.on("ready", async () => {
 
 bot.on("message", async message => {
     if (message.author.bot) return;
-    if(!coins[message.author.id+message.guild.id]){
-      coins[message.author.id+message.guild.id] = {
-        debt: 0,
-        coins: 0
-      };
-    }
-    fs.writeFile("./coins.json", JSON.stringify(coins), (err) =>{
-      if (err) console.log(err)
-    });
     if (message.channel.type === "dm") return;
-    let coinAmt = Math.floor(Math.random()*40)+1;
-    let baseAmt = Math.floor(Math.random()*10)+1;
-    if(coinAmt === baseAmt){
-      coins[message.author.id+message.guild.id] = {
-        coins: coins[message.author.id+message.guild.id].coins + coinAmt,
-        debt: coins[message.author.id+message.guild.id].debt
-      };
-      fs.writeFile("./coins.json", JSON.stringify(coins), (err) =>{
-        if (err) console.log(err)
-      });
-    }
-    let prefix = botconfig.prefix;
-    if (!message.content.startsWith(prefix)) return;
+    if (!message.content.startsWith("b")) return;
     if(cooldown.has(message.author.id) && message.author.id != "444998388795179042"){
       message.delete();
-      message.reply(`You must wait ${cdseconds} seconds between sending commands`)
-      return;
+      return message.reply(`You must wait ${cdseconds} seconds between sending commands`);
     }
     cooldown.add(message.author.id);
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0].toLowerCase();
     let args = messageArray.slice(1);
     let commandfile = bot.commands.get(cmd.slice(prefix.length)) || bot.commands.get(bot.aliases.get(cmd.slice(prefix.length)))
-    console.log("Passed")
-    if(commandfile) commandfile.run(bot,message,args)
+    if(commandfile){
+      console.log(`Passed`)
+      commandfile.run(bot,message,args)
+    }
     setTimeout(() =>{
       cooldown.delete(message.author.id)
     }, cdseconds * 1000)
