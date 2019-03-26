@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args)=>{
   .setAuthor(`Info for ${mention.username}`, mention.displayAvatarURL)
   .setThumbnail(mention.displayAvatarURL)
   .setFooter(`Info requested by ${message.author.username}`)
-  .addField(`Info for ${mention.username}`, `**ID**: ${mention.id}\n**Discriminator**: ${mention.discriminator}\n**Status**: ${mention.presence.status}\n**Playing**: ${game}\n**Account created**: ${mention.createdAt}\n **Joined Server**: ${message.member.joinedAt}`)
+  .addField(`Info for ${mention.username}`, `**ID**: ${mention.id}\n**Discriminator**: ${mention.discriminator}\n**Status**: ${mention.presence.status}\n**Playing**: ${game}\n**Account created**: ${mention.createdAt}\n **Joined Server**: ${mention.joinedAt}`)
   message.channel.send(uInfoEmbed)
 }
 
