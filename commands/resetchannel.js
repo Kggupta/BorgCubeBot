@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args)=>{
-  if (message.guild.id != "546754678172549124") return message.channel.send("Yeah no i'd rather not");
+  if (message.guild.id != "546754678172549124") return;
   if(!message.member.roles.find(r => r.name === "QGames")){
     return message.channel.send("You don't have the required role to use this command");
   }
