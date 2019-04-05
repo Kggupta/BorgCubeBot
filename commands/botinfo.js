@@ -9,14 +9,14 @@ module.exports.run = async (bot, message, args)=>{
   .setColor("GREEN")
   .setThumbnail(bicon)
   .setDescription("Bot Info")
-  .addField("Creator", "<@444998388795179042>")
-  .addField("Bot Name", `${bot.user.username}`)
-  .addField("Servers", `${Snum}`)
-  .addField("Channels", `${Cnum}`)
-  .addField("Users", `${Unum}`)
-  .addField("Created On", bot.user.createdAt.toUTCString())
+  .addField("Creator", "<@444998388795179042>", true)
+  .addField("Bot Name", `${bot.user.username}`, true)
+  .addField("Servers", `${Snum}`, true)
+  .addField("Channels", `${Cnum}`, true)
+  .addField("Users", `${Unum}`, true)
+  .addField("Created On", bot.user.createdAt.toUTCString(), true)
   .setTimestamp()
-  .addField("Git Repo", "https://github.com/Kggupta/borgcube")
+  .addField("Git Repo", "https://github.com/Kggupta/borgcube", true)
 
     message.channel.send(botembed);
 }
