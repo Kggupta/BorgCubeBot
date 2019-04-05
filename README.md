@@ -29,3 +29,9 @@ The features I will add to it are as follows, but not limited to:
   - Adjust member permissions through a command
 - Fun
   - Meme making
+
+<p align="center">
+  <a href="https://discordbots.org/bot/518206536535769099" >
+    <img src="https://discordbots.org/api/widget/518206536535769099.svg" alt="BorgCube" />
+  </a>
+</p>
