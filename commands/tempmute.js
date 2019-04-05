@@ -41,9 +41,9 @@ module.exports.run = async (bot, message, args)=>{
   let muteEmbed = new Discord.RichEmbed()
   .setTitle("Muted")
   .setColor("RED")
-  .addField("Mute Enforcer", `<@${message.author.id}>`)
-  .addField("User Muted", `<@${usertomute.id}>`)
-  .addField("Duration of mute", timetomute)
+  .addField("Mute Enforcer", `<@${message.author.id}>`, true)
+  .addField("User Muted", `<@${usertomute.id}>`, true)
+  .addField("Duration of mute", timetomute, true)
   .addField("Reason", muteReason)
   message.channel.send(muteEmbed);
 
@@ -61,8 +61,8 @@ module.exports.run = async (bot, message, args)=>{
     let unmuteEmbed = new Discord.RichEmbed()
     .setTitle("Unmuted")
     .setColor("RED")
-    .addField("Mute was enforced by", `<@${message.author.id}>`)
-    .addField("User Unmuted", `<@${usertomute.id}>`);
+    .addField("Mute was enforced by", `<@${message.author.id}>`, true)
+    .addField("User Unmuted", `<@${usertomute.id}>`,true);
     return message.channel.send(unmuteEmbed);
   }, ms(timetomute));
 
