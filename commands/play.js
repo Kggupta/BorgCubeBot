@@ -71,7 +71,7 @@ module.exports.run = async (bot, message, args)=>{
 module.exports.help = {
   name: "play",
   aliases: ["pm", "vc", "music"],
-  description: "Have the bot join your voice channel and play whatever song you want. You must be in a VC for this command to work.",
+  description: "Have the bot join your voice channel and play whatever song you want. You must be in a VC for this command to work.\nThis command is in beta, and will probably have some bugs, please be patient and I will have a full release of the command soon.",
   usage: "bplay {url/name}",
   accessibleby: "Anyone"
 }
