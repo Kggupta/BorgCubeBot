@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args)=>{
   let mention = message.mentions.users.first() || message.author
   let game;
   if (mention.presence.game === null) {
-    game = "User is not playing a game"
+    game = "Not playing a game"
   } else {
     game = mention.presence.game.name
   }
