@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args)=>{
   .addField("Servers", `${Snum}`)
   .addField("Channels", `${Cnum}`)
   .addField("Users", `${Unum}`)
-  .addField("Created On", bot.user.createdAt)
+  .addField("Created On", bot.user.createdAt.toUTCString())
   .setTimestamp()
   .addField("Git Repo", "https://github.com/Kggupta/borgcube")
 

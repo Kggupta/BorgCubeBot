@@ -17,20 +17,20 @@ module.exports.run = async (bot, message, args)=>{
       return memCount;
     }
 
-
+    console.log(message.member.joinedAt);
     let serverembed = new Discord.RichEmbed()
     .setTitle("Server Information")
     .setColor("GREEN")
     .setThumbnail(sicon)
-    .addField("Server Name", message.guild.name)
-    .addField("Owner", message.guild.owner.toString())
-    .addField("Created On", message.guild.createdAt)
-    .addField("Server Region", message.guild.region)
-    .addField("Channels", `${message.guild.channels.filter(channel => channel.type === `voice`).size} voice channels & ${message.guild.channels.filter(channel => channel.type === `text`).size} text channels`)
-    .addField("You Joined", message.member.joinedAt)
-    .addField("Humans", ChkMem(message.guild))
-    .addField('Bots', ChkBot(message.guild))
-    .addField("Total Members", message.guild.memberCount);
+    .addField("Server Name", message.guild.name, true)
+    .addField("Owner", message.guild.owner.toString(), true)
+    .addField("Server Region", message.guild.region, true)
+    .addField("Channels", `${message.guild.channels.filter(channel => channel.type === `voice`).size} VC & ${message.guild.channels.filter(channel => channel.type === `text`).size} Text`, true)
+    .addField("Humans", ChkMem(message.guild), true)
+    .addField('Bots', ChkBot(message.guild), true)
+    .addField("Total Members", message.guild.memberCount, true)
+    .addField("Created On", message.guild.createdAt.toUTCString())
+    .addField("You Joined", message.member.joinedAt.toUTCString());
 
     message.channel.send(serverembed);
 }

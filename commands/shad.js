@@ -13,8 +13,8 @@ module.exports.run = async (bot, message, args)=>{
   .setTitle("Social media account")
   .setColor("GREEN")
   .addField("Name", nameOfUser)
-  .addField("Snapchat username", `${snapChatAcc}`)
-  .addField("Instagram username", `${instaAcc}`)
+  .addField("Snapchat username", `${snapChatAcc}`, true)
+  .addField("Instagram username", `${instaAcc}`,true)
 
   bot.channels.get("548295750526959638").send(shadEmbed)
   return;

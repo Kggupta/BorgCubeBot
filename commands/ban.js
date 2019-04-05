@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args)=>{
   .addField("Banned User", `${bannedUser} with ID ${bannedUser.id}`)
   .addField("Banned By", `<@${message.author.id}> with ID ${message.author.id}`)
   .addField("Banned In", message.channel)
-  .addField("Time", message.createdAt)
+  .addField("Time", message.createdAt.toUTCString())
   .addField("Reason", banReason);
 
   let bannedChannel = message.guild.channels.find(`name`, "mod-log");

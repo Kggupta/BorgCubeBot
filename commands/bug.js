@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args)=>{
     .addField("In server", message.guild.id)
     .addField("In channel", message.channel.id)
     .setTimestamp()
-    .addField("Account created", message.author.createdAt)
+    .addField("Account created", message.author.createdAt.toUTCString())
     .addField("Bug", bugmessage);
 
     bot.channels.get("522985854319329295").send(bugembed)

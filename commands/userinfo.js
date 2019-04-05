@@ -14,8 +14,13 @@ module.exports.run = async (bot, message, args)=>{
   .setAuthor(`Info for ${mention.username}`, mention.displayAvatarURL)
   .setThumbnail(mention.displayAvatarURL)
   .setFooter(`Info requested by ${message.author.username}`)
-  .addField(`Info for ${mention.username}`, `**ID**: ${mention.id}\n**Discriminator**: ${mention.discriminator}\n**Status**: ${mention.presence.status}\n**Playing**: ${game}\n**Account created**: ${mention.createdAt}`)
-  message.channel.send(uInfoEmbed)
+  .addField(`Info for`, mention.username, true)
+  .addField(`ID`, mention.id, true)
+  .addField(`Status`, mention.presence.status.toUpperCase(), true)
+  .addField(`Playing`, game, true)
+  .addField(`Account Created`, mention.createdAt.toUTCString(), true)
+
+  return message.channel.send(uInfoEmbed);
 }
 
 module.exports.help = {
