@@ -17,7 +17,6 @@ module.exports.run = async (bot, message, args)=>{
       return memCount;
     }
 
-    console.log(message.member.joinedAt);
     let serverembed = new Discord.RichEmbed()
     .setTitle("Server Information")
     .setColor("GREEN")
