@@ -31,7 +31,6 @@ module.exports.run = async (bot, message, args)=>{
   if (ms(timetomute) === undefined) return message.channel.send("Give a valid time period");
   args.shift();
   args.shift();
-  console.log(args);
   await(usertomute.addRole(muterole.id));
   if(!args[1]){
     muteReason = "No reason given";

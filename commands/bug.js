@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args)=>{
     let bugmessage = args.join(" ");
-    console.log(bugmessage)
     let bugembed = new Discord.RichEmbed()
     .setTitle("Bug report")
     .setColor("RED")

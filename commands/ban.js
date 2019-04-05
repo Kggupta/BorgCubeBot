@@ -10,7 +10,6 @@ module.exports.run = async (bot, message, args)=>{
   if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("You aren't an Admin, simple human.");
   if(bannedUser.hasPermission("ADMINISTRATOR")) return message.channel.send("You would attempt to ban someone of The Borg Collective?");
   if(!bannedUser.bannable) return message.channel.send("This person's role is too high for me");
-  console.log(message.mentions.users.first().highestRole)
   let banEmbed = new Discord.RichEmbed()
   .setDescription("Banned")
   .setColor("RED")

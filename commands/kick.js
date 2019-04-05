@@ -10,7 +10,6 @@ module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("You aren't an Admin, simple human.");
     if(kickedUser.hasPermission("ADMINISTRATOR")) return message.channel.send("You would attempt to kick someone of The Borg Collective?");
     if(!kickedUser.kickable) return message.channel.send("This person's role is too high for me");
-    console.log(message.mentions.users.first().highestRole)
     let kickEmbed = new Discord.RichEmbed()
     .setDescription("Kick")
     .setColor("#e56b00")
