@@ -2,13 +2,13 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args)=>{
   let mention = message.mentions.users.first() || message.author
-  let user = message.author
   let game;
   if (mention.presence.game === null) {
     game = "User is not playing a game"
   } else {
     game = mention.presence.game.name
   }
+  roleMember = message.mentions.members.first() || message.member
   const uInfoEmbed = new Discord.RichEmbed()
   .setColor('GREEN')
   .setAuthor(`Info for ${mention.username}`, mention.displayAvatarURL)
@@ -19,6 +19,7 @@ module.exports.run = async (bot, message, args)=>{
   .addField(`Status`, mention.presence.status.toUpperCase(), true)
   .addField(`Playing`, game, true)
   .addField(`Account Created`, mention.createdAt.toUTCString(), true)
+  .addField('Roles', roleMember.roles.map(r => `${r}`).join(' | '), true)
 
   return message.channel.send(uInfoEmbed);
 }
