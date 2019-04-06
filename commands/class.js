@@ -50,7 +50,7 @@ module.exports.run = async (bot, message, args)=>{
 module.exports.help = {
   name: "species",
   aliases: ["class"],
-  description: "See the list of species you can become. Check `pickspecies` for info on how to set your class.",
+  description: "See the list of species you can become. Check `pickspecies` for info on how to set your class.\nPlease note that since the RPG functionality is new, databases will be unstable and saves might get lost. If they do feel free to DM me (The Borg) and I will fix it for you.",
   usage: "bspecies",
   accessibleby: "Anyone"
 }

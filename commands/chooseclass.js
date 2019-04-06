@@ -59,7 +59,7 @@ module.exports.run = async (bot, message, args)=>{
 module.exports.help = {
   name: "pickspecies",
   aliases: ["chooseclass", "pickspec"],
-  description: "Pick your species! This cannot be reversed once you make your choice!\n The number is the species number out of 4 displayed when you use the `species` command.",
+  description: "Pick your species! This cannot be reversed once you make your choice!\n The number is the species number out of 4 displayed when you use the `species` command.\n Please note that since the RPG functionality is new, databases will be unstable and saves might get lost. If they do feel free to DM me (The Borg) and I will fix it for you.",
   usage: "bpickspecies [number]",
   accessibleby: "Anyone"
 }
