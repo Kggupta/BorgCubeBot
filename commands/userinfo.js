@@ -3,10 +3,17 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args)=>{
   let mention = message.mentions.users.first() || message.author
   let game;
+  let gamestate;
   if (mention.presence.game === null) {
     game = "Not playing a game"
+    gamestate = "Playing"
   } else {
     game = mention.presence.game.name
+    if(game = "Spotify"){
+      gamestate = "Listening to"
+    }else{
+      gamestate = "Playing"
+    }
   }
   roleMember = message.mentions.members.first() || message.member
   const uInfoEmbed = new Discord.RichEmbed()
@@ -17,7 +24,7 @@ module.exports.run = async (bot, message, args)=>{
   .addField(`Info for`, mention.username, true)
   .addField(`ID`, mention.id, true)
   .addField(`Status`, mention.presence.status.toUpperCase(), true)
-  .addField(`Playing`, game, true)
+  .addField(gamestate, game, true)
   .addField(`Account Created`, mention.createdAt.toUTCString(), true)
   .addField('Roles', roleMember.roles.map(r => `${r}`).join(' | '), true)
 
