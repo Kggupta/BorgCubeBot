@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args)=>{
         return message.channel.send("Not a valid choice")
       break;
     }
-    message.channel.send("Are you sure? This cannot be undone!").then(msg =>{
+    message.channel.send(`Are you sure you want to be ${species}? This cannot be undone!`).then(msg =>{
       msg.react('✅').then( r =>{
         msg.react('❎')
 
