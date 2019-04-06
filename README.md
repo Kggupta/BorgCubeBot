@@ -27,12 +27,12 @@ The features I will add to it are as follows, but not limited to:
   - Befriend other species to get a constant stream of credits (passive income)
   - Level up to increase the awesomeness of your ship
     - The best ship becomes the federations 'flagship' much like the USS enterprise
-  - Choose your species (human, vulcan, klingon, ferengi, etc) and gain skills based on your species
+  - ~~Choose your species (human, vulcan, klingon, ferengi, etc) and gain skills based on your choice~~ (90%)
 - Convenience
   - ~~Use animated emotes without needing to buy nitro~~
-  - Search images, ~~videos~~, google all from a command
-  - ~~Add roles using a command~~
-  - ~~Run polls with the bot~~
-  - Adjust member permissions through a command
+  - Search images, ~~videos~~, and google 
+  - ~~Add roles~~
+  - ~~Run polls~~
+  - Adjust member permissions
 - Fun
   - Meme making
