@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args)=>{
     var am = args[0]
     setTimeout(() => {
       message.channel.bulkDelete(am).catch(err => message.channel.send("I couldn't assimilate those messages. Bots cannot purge more than 100 messages at a time nor can they delete messages more than 14 days old. You may also get this message due to a DiscordAPI overload.").then(m => m.delete(2000)))
-      message.channel.send("I've assimilated out  " + am + " messages.").then(m => m.delete(1000))
+      message.channel.send("I've assimilated " + am + " messages.").then(m => m.delete(1000))
     }, 2000);
   } else {
   	message.channel.send("Feeble human you do not have permission to do that!").then(m => m.delete(1500))
