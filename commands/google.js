@@ -7,8 +7,6 @@ module.exports.run = async (bot, message, args)=>{
   google(args.join(" "), function (err, res){
     if (err) console.error(err)
       var link = res.links[1];
-      console.log(link.title + ' - ' + link.href)
-      console.log(link.description + "\n")
       if(!link.description){
         description = "None given"
       }else{
