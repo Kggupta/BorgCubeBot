@@ -30,7 +30,7 @@ The features I will add to it are as follows, but not limited to:
   - ~~Choose your species (human, vulcan, klingon, ferengi, etc) and gain skills based on your choice~~ (90%)
 - Convenience
   - ~~Use animated emotes without needing to buy nitro~~
-  - Search images, ~~videos~~, and google 
+  - Search images, ~~videos, and google~~
   - ~~Add roles~~
   - ~~Run polls~~
   - Adjust member permissions
