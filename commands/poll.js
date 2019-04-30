@@ -6,11 +6,12 @@ module.exports.run = async (bot, message, args)=>{
   .setTitle("Poll")
   .setColor("GREEN")
   .addField("Question", pollmessage)
+  .setFooter(`Poll started by ${message.author.username}`)
 
   message.channel.send(pollEmbed).then(function (message) {
-    message.react("👍")
-    message.react("👎")
-    message.pin()
+    message.react("👍").then( r =>{
+      message.react("👎")
+    });
   });
 }
 
