@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "vote",
-  aliases: ["vte"],
+  aliases: [],
   description: "Get the link to upvote the bot on the BotList site!",
   usage: "bvote",
   accessibleby: "Anyone"

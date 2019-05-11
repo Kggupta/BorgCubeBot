@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "avatar",
-  aliases: ["av"],
+  aliases: ["pfp"],
   description: "Enlarge the avatar of a user",
   usage: "bavatar <member>",
   accessibleby: "Anyone"

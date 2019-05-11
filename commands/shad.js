@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "shad",
-  aliases: ["shadsocial", "social"],
+  aliases: [],
   description: "Add your social media's to the compiled list of social media channel. See `usage` to see how to use this command. If you only have one of the two accounts, simply say N/A for that account.",
   usage: "bshad <member> [snap account] [insta account]",
   accessibleby: "Anyone (In the approved server)"

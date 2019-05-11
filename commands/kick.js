@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
   name: "kick",
-  aliases: ["k", "boot"],
+  aliases: ["boot"],
   description: "Kick a member",
   usage: "bkick <member> {reason}",
   accessibleby: "Administrator"

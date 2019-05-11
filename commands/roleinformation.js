@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "roleinfo",
-  aliases: ["roinfo"],
+  aliases: ["rinfo"],
   description: "Get information about the specified role",
   usage: "broleinfo {rolename}",
   accessibleby: "Anyone"

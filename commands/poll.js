@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "poll",
-  aliases: ["p", "ask"],
+  aliases: ["ask"],
   description: "Have the bot run a poll using the parameters you have",
   usage: "bpoll {question}",
   accessibleby: "Anyone"

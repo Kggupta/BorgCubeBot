@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "unban",
-  aliases: ["ub"],
+  aliases: [],
   description: "Unban a player",
   usage: "bunban [Player ID]",
   accessibleby: "Administrator"

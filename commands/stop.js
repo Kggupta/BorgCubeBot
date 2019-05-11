@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "stop",
-  aliases: ["endmusic", "stp"],
+  aliases: ["endmusic"],
   description: "Stop the bots music in your active voice channel. This command is in beta, and will probably have some bugs, please be patient and I will have a full release of the command soon.",
   usage: "bstop",
   accessibleby: "Anyone"

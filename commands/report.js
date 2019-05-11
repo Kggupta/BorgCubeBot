@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "report",
-  aliases: ["rpt", "bar"],
+  aliases: [],
   description: "Report a player",
   usage: "breport <member> {reason}",
   accessibleby: "Anyone"

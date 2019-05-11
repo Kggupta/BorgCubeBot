@@ -28,7 +28,7 @@ module.exports.run = async (bot, message, args)=>{
 
 module.exports.help = {
   name: "addrole",
-  aliases: ["ar"],
+  aliases: ["addrle"],
   description: "Add the specified role to the specified user. The bot must have manage roles perm and must have a higher role than the one you wish to add to the user.",
   usage: "baddrole <member> {role}",
   accessibleby: "MANAGE_ROLES_OR_PERMISSIONS"
