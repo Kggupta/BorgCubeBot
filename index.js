@@ -37,8 +37,7 @@ bot.on("message", async message => {
     if (message.channel.type === "dm") return;
     if (!message.content.startsWith("b")) return;
     if(cooldown.has(message.author.id) && message.author.id != "444998388795179042"){
-      message.delete();
-      return message.reply(`You must wait ${cdseconds} seconds between sending commands`);
+      return;
     }
     cooldown.add(message.author.id);
     let messageArray = message.content.split(" ");
