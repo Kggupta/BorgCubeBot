@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args)=>{
     var connection = await voiceChannel.join();
   }catch(error){
     console.log(error)
-    return message.channel.send("Something just went wrong.")
+    return;
   }
   const searchQuery = args.join(' ')
   if(!searchQuery)return message.channel.send("You did not tell me what to play.")
