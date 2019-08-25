@@ -17,7 +17,13 @@ module.exports.run = async (bot, message, args)=>{
   .setDescription(args.join(" "))
 
   message.channel.send(emoteEmbed);
-  return message.delete();
+  
+  try{
+    return message.delete();
+  }catch(error){
+    console.log(error)
+    return;
+  }
 }
 
 module.exports.help = {
