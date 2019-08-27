@@ -45,7 +45,7 @@ bot.on("message", async message => {
     let args = messageArray.slice(1);
     let commandfile = bot.commands.get(cmd.slice(prefix.length)) || bot.commands.get(bot.aliases.get(cmd.slice(prefix.length)))
     if(commandfile){
-      console.log(`Passed ${message.author.username}`)
+      console.log(`Passed ${message.author.username} to ${commandfile}`)
       commandfile.run(bot,message,args)
     }
     setTimeout(() =>{
