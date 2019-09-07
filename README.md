@@ -1,12 +1,6 @@
 # BorgCubeBot
 
-<p align="center">
-  <a href="https://discordbots.org/bot/518206536535769099" >
-    <img src="https://discordbots.org/api/widget/518206536535769099.svg" alt="BorgCube" />
-  </a>
-</p>
-
-This bot is really just a fun project that I'm doing as a hobby and to interact with my friends. I plan on making it an all-in-one bot, themed after the popular Star Trek villain known only as "The Borg".
+This bot is really just a fun project that I'm doing as a hobby and to interact with my friends. I plan on making it an all-in-one bot, themed after the popular Star Trek villain known only as "The Borg". Thank you for your overwhelming support and 30 thousand users!
 
 Join the [bot server](https://discord.gg/evYQA2h) if you would like to help with beta-testing!  
 [upvote](https://discordbots.org/bot/518206536535769099/vote) the bot if you like what you see!  
