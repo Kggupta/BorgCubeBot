@@ -2,19 +2,19 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args)=>{
   let mention = message.mentions.users.first() || message.author
-  let game;
   let gamestate;
-  if (mention.presence.game === null) {
-    game = "Not playing a game"
-    gamestate = "Playing"
-  } else {
-    game = mention.presence.game.name
-    if(game = "Spotify"){
+
+  switch(mention.presence.game){
+    case null:
+      gamestate = "Not playing a game"
+    break;
+    case "Spotify":
       gamestate = "Listening to"
-    }else{
+    break;
+    default:
       gamestate = "Playing"
-    }
   }
+
   roleMember = message.mentions.members.first() || message.member
   const uInfoEmbed = new Discord.RichEmbed()
   .setColor('GREEN')
@@ -24,9 +24,9 @@ module.exports.run = async (bot, message, args)=>{
   .addField(`Info for`, mention.username, true)
   .addField(`ID`, mention.id, true)
   .addField(`Status`, mention.presence.status.toUpperCase(), true)
-  .addField(gamestate, game, true)
+  .addField(gamestate, mention.presence.game, true)
   .addField(`Account Created`, mention.createdAt.toUTCString(), true)
-  .addField('Roles', roleMember.roles.map(r => `${r}`).join(' | '), true)
+  .addField('Roles', roleMember.roles.map(r => `${r}`).join(' | ') : "", true)
 
   return message.channel.send(uInfoEmbed);
 }
