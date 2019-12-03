@@ -2,3 +2,4 @@ package-lock.json
 token.json
 .DS_Store
 start.bat
+/node_modules
