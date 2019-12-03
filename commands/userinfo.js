@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args)=>{
   let mention = message.mentions.users.first() || message.author
   let gamestate;
-
+  let detail;
   switch(mention.presence.game){
     case null:
       gamestate = "Not playing a game"
@@ -13,6 +13,12 @@ module.exports.run = async (bot, message, args)=>{
     break;
     default:
       gamestate = "Playing"
+  }
+  
+  if(mention.presence.game == null){
+    detail = "-"
+  }else{
+    detail = mention.presence.game
   }
 
   roleMember = message.mentions.members.first() || message.member
@@ -26,7 +32,7 @@ module.exports.run = async (bot, message, args)=>{
   .addField(`Status`, mention.presence.status.toUpperCase(), true)
   .addField(gamestate, mention.presence.game, true)
   .addField(`Account Created`, mention.createdAt.toUTCString(), true)
-  .addField('Roles', roleMember.roles.map(r => `${r}`).join(' | ') : "", true)
+  .addField('Roles', roleMember.roles.map(r => `${r}`).join(' | '), true)
 
   return message.channel.send(uInfoEmbed);
 }
