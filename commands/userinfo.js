@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args)=>{
     default:
       gamestate = "Playing"
   }
-  
+
   if(mention.presence.game == null){
     detail = "-"
   }else{
@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args)=>{
   .addField(`Info for`, mention.username, true)
   .addField(`ID`, mention.id, true)
   .addField(`Status`, mention.presence.status.toUpperCase(), true)
-  .addField(gamestate, mention.presence.game, true)
+  .addField(gamestate, detail, true)
   .addField(`Account Created`, mention.createdAt.toUTCString(), true)
   .addField('Roles', roleMember.roles.map(r => `${r}`).join(' | '), true)
 
