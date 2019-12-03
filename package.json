@@ -16,6 +16,7 @@
     "m3u8stream": "^0.6.3",
     "ms": "^2.1.1",
     "node-opus": "^0.3.3",
+    "parse-time": "^0.1.4",
     "simple-youtube-api": "^5.2.1",
     "superagent": "^5.0.2",
     "ytdl-core": "^0.29.7"
