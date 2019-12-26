@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args)=>{
-  return message.channel.send("https://discordapp.com/api/oauth2/authorize?client_id=518206536535769099&permissions=2080762993&scope=bot")
+  message.channel.send("https://discordapp.com/api/oauth2/authorize?client_id=518206536535769099&permissions=2080762993&scope=bot")
 }
 
 module.exports.help = {

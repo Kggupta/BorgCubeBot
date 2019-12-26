@@ -16,13 +16,13 @@ module.exports.run = async (bot, message, args)=>{
       if (!member || !role) return message.channel.send("Remove role failed due to invalid arguments")
       member.removeRole(role)
       .then((MemberGuild) => {
-          return message.channel.send(`:white_check_mark: Role ${rolename} has been removed from ${member} `);
+          message.channel.send(`:white_check_mark: Role ${rolename} has been removed from ${member} `);
       })
       .catch ((err) => {
-          return message.channel.send(`:x: Was not able to remove Role ${rolename} from ${member} `);
+          message.channel.send(`:x: Was not able to remove Role ${rolename} from ${member} `);
       });
   } else {
-      return message.channel.send("You do not have permission to do this, you must have `MANAGE_ROLES_OR_PERMISSIONS` to use this command.");
+      message.channel.send("You do not have permission to do this, you must have `MANAGE_ROLES_OR_PERMISSIONS` to use this command.");
   }
 }
 

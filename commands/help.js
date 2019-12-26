@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const prefix = "b"
 
 module.exports.run = async (bot, message, args)=>{
 
