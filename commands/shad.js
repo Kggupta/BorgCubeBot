@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args)=>{
   if (message.guild.id != "546754678172549124") return;
-  if (!member.hasPermission("ADMINISTRATOR")) return message.channel.send("This command is disabled for you. Please wait for a mod.")
+  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("This command is disabled for you. Please wait for a mod.")
   message.channel.send("Passed to compiler");
   let nameOfUser = message.guild.member(message.mentions.users.first());
   if (!nameOfUser) return message.channel.send("You need to add a name.");
