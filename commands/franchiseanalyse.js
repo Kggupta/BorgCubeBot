@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const Client  = new Discord.Client();
 const {GoogleSpreadsheet} = require('google-spreadsheet');
 const { promisify } = require('util');
-const doc = new GoogleSpreadsheet(process.env.SHEET_ID);
+const doc = new GoogleSpreadsheet("1UT9ap2_Fbvo34zWcJWJN06KUxbRD1rpEh-qsAydhaIo");
 
 async function accessSpreadsheet(entries, lbtype, message){
   console.log(lbtype)
