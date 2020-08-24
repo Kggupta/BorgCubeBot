@@ -2,12 +2,12 @@ const Discord = require("discord.js");
 const Client  = new Discord.Client();
 const {GoogleSpreadsheet} = require('google-spreadsheet');
 const { promisify } = require('util');
-const doc = new GoogleSpreadsheet("1UT9ap2_Fbvo34zWcJWJN06KUxbRD1rpEh-qsAydhaIo");
+const doc = new GoogleSpreadsheet(process.env.SHEET_ID);
 
 async function accessSpreadsheet(entries, lbtype, message){
   console.log(lbtype)
   await doc.useServiceAccountAuth({
-    private_key_id: process.env.PRIVATE_KEY_ID,
+    private_key_id: process.env.PRIVATE_KEY_ID.replace(new RegExp("\\\\n", "\g"), "\n"),
     client_email: process.env.CLIENT_EMAIL,
     private_key: process.env.PRIVATE_KEY,
 
