@@ -13,6 +13,7 @@
     "discord.js": "^11.5.1",
     "ffmpeg": "0.0.4",
     "google": "^2.1.0",
+    "google-spreadsheet": "^3.0.13",
     "m3u8stream": "^0.6.3",
     "ms": "^2.1.1",
     "node-opus": "^0.3.3",
