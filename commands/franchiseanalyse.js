@@ -75,7 +75,7 @@ async function accessSpreadsheet(entries, lbtype, message){
 
 module.exports.run = async (bot, message, args)=>{
   if (message.guild.id != "718638326973988935") return;
-  if(!message.member.roles.find(r => r.name === "Franchise Recruiter") || !message.member.hasPermission('ADMINISTRATOR')){
+  if(!message.member.roles.find(r => r.name === "Franchise Recruiter")){
     const channel = message.guild.channels.find(`name`, "taco-leaders");
     channel.send(`${message.author.username} | ${message.author.id} tried to use the analyse command.`)
     return message.channel.send("You aren't a franchise recruiter! This incident will be reported.");
