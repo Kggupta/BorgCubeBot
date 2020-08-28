@@ -21,6 +21,7 @@ async function accessSpreadsheet(entries, lbtype, message){
     switch(lbtype){
       case "Shifts":
         for(var i = 0; i < entries.length; i++){
+          indexInSheet = -1
           var searchTerm = (entries[i])[0]
           for(var t = 0, len = rows.length; t < len; t++) {
             if (rows[t].ID === searchTerm) {
@@ -28,15 +29,22 @@ async function accessSpreadsheet(entries, lbtype, message){
               break;
             }
           }
-          rows[indexInSheet].shiftsPrior = rows[indexInSheet].shiftsCurrent
-          rows[indexInSheet].shiftsCurrent = (entries[i])[1]
-          rows[indexInSheet].shiftsIncrease = parseInt(rows[indexInSheet].shiftsCurrent) - parseInt(rows[indexInSheet].shiftsPrior)
-          await rows[indexInSheet].save();
+          if (indexInSheet == -1) {
+            await sheet.addRow({ID: searchTerm, incomePrior: 0, incomeCurrent: 0, shiftsPrior: 0, shiftsCurrent:(entries[i][1]), donationPrior: 0, donationCurrent: 0, memberStatus: "NEW"});
+            message.channel.send(`Added ${searchTerm} to sheet. Please manually insert the shack name and username.`)
+          }else{
+            rows[indexInSheet].shiftsPrior = rows[indexInSheet].shiftsCurrent
+            rows[indexInSheet].shiftsCurrent = (entries[i])[1]
+            rows[indexInSheet].shiftsIncrease = parseInt(rows[indexInSheet].shiftsCurrent) - parseInt(rows[indexInSheet].shiftsPrior)
+            rows[indexInSheet].memberStatus = "OLD"
+            await rows[indexInSheet].save();
+          }
         }
-        message.channel.send("COMPLETE")
+        message.channel.send("Ready for next page.")
         break;
         case "Donations":
           for(var i = 0; i < entries.length; i++){
+            indexInSheet = -1
             var searchTerm = (entries[i])[0]
             for(var t = 0, len = rows.length; t < len; t++) {
               if (rows[t].ID === searchTerm) {
@@ -44,17 +52,23 @@ async function accessSpreadsheet(entries, lbtype, message){
                 break;
               }
             }
-            rows[indexInSheet].donationPrior = rows[indexInSheet].donationCurrent
-            rows[indexInSheet].donationCurrent = (entries[i])[1]
-            rows[indexInSheet].donationIncrease = parseInt(rows[indexInSheet].donationCurrent) - parseInt(rows[indexInSheet].donationPrior.replace(/,/g,"").replace(/\$/g,""))
-
-            await rows[indexInSheet].save();
+            if (indexInSheet == -1){
+              await sheet.addRow({ID: searchTerm, incomePrior: 0, incomeCurrent: 0, shiftsPrior: 0, shiftsCurrent:0, donationPrior: 0, donationCurrent: (entries[i])[1], memberStatus: "NEW" });
+              message.channel.send(`Added ${searchTerm} to sheet. Please manually insert the shack name and username.`)
+            }else{
+              rows[indexInSheet].donationPrior = rows[indexInSheet].donationCurrent
+              rows[indexInSheet].donationCurrent = (entries[i])[1]
+              rows[indexInSheet].donationIncrease = parseInt(rows[indexInSheet].donationCurrent) - parseInt(rows[indexInSheet].donationPrior.replace(/,/g,"").replace(/\$/g,""))
+              rows[indexInSheet].memberStatus = "OLD"
+              await rows[indexInSheet].save();
+            }
           }
-          message.channel.send("COMPLETE")
+          message.channel.send("Ready for next page.")
 
           break;
           case "Incomes":
             for(var i = 0; i < entries.length; i++){
+              indexInSheet = -1
               var searchTerm = (entries[i])[0]
               for(var t = 0, len = rows.length; t < len; t++) {
                 if (rows[t].ID === searchTerm) {
@@ -62,13 +76,18 @@ async function accessSpreadsheet(entries, lbtype, message){
                   break;
                 }
               }
-              rows[indexInSheet].incomePrior = rows[indexInSheet].incomeCurrent
-              rows[indexInSheet].incomeCurrent = (entries[i])[1]
-              rows[indexInSheet].incomeIncrease = parseInt(rows[indexInSheet].incomeCurrent) - parseInt(rows[indexInSheet].incomePrior.replace(/,/g,"").replace(/\$/g,""))
-              await rows[indexInSheet].save();
+              if (indexInSheet == -1){
+                await sheet.addRow({ID: searchTerm, incomePrior: 0, incomeCurrent: (entries[i][1]), shiftsPrior: 0, shiftsCurrent:0, donationPrior: 0, donationCurrent: 0, memberStatus: "NEW"});
+                message.channel.send(`Added ${searchTerm} to sheet. Please manually insert the shack name and username.`)
+              }else{
+                rows[indexInSheet].incomePrior = rows[indexInSheet].incomeCurrent
+                rows[indexInSheet].incomeCurrent = (entries[i])[1]
+                rows[indexInSheet].incomeIncrease = parseInt(rows[indexInSheet].incomeCurrent) - parseInt(rows[indexInSheet].incomePrior.replace(/,/g,"").replace(/\$/g,""))
+                rows[indexInSheet].memberStatus = "OLD"
+                await rows[indexInSheet].save();
+              }
             }
-            message.channel.send("COMPLETE")
-
+            message.channel.send("Ready for next page.")
             break;
     }
 }
